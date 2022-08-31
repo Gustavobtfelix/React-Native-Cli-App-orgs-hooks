@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
+import Estrelas from './Estrelas';
 
 
 function ListaDeProdutos({nome, imagem, distancia, estrelas}) {
@@ -7,10 +8,12 @@ function ListaDeProdutos({nome, imagem, distancia, estrelas}) {
                  
                 <Image source={imagem} accessibilityLabel={nome} style={estilos.imagemCSS}/>
                 <View style={estilos.listaCSS}>
-                    <Text style={estilos.nomeCSS}> {nome} </Text>
-                    <Text style={estilos.distancia}>{distancia}</Text>
+                    <View>
+                        <Text style={estilos.nomeCSS}> {nome} </Text>
+                        <Estrelas quantidade={ estrelas }/>
+                    </View>
+                    <Text style={estilos.distancia}>{distancia}</Text>                    
                 </View>
-                <Text>{estrelas}</Text>
                  
   </View>;
 }
