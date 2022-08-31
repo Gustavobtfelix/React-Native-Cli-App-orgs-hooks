@@ -1,10 +1,12 @@
 import React from 'react';
 import Topo from './Componentes/Topo';
+import Produtores from './Componentes/Produtores';
 
-function Home(topoTXT) {
+function Home() {
     return (
         <>
-        <Topo {...topoTXT}/>
+        
+        <Produtores topo = {Topo}/>
         </>
     );
 }

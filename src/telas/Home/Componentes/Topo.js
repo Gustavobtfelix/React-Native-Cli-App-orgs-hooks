@@ -5,12 +5,12 @@ import logoOrgsImagem from '../../../../assets/logoOrgs.png';
 
 
 
-function Topo({boasVindasTXT, legendaTXT}) {
+function Topo() {
     return <>
        <View style={estilos.Topo}>
        <Image source={logoOrgsImagem} style={estilos.logoOrgs}/>
-       <Text style={estilos.BoasVindas}>{boasVindasTXT}</Text>
-       <Text style={estilos.legenda}>{legendaTXT}</Text>
+       <Text style={estilos.BoasVindas}> Olá Leitor </Text>
+       <Text style={estilos.legenda}> Encontre os melhores produtores </Text>
        </View>
     </>
   }
@@ -30,10 +30,12 @@ function Topo({boasVindasTXT, legendaTXT}) {
         fontSize: 26,
         lineHeight: 42,
         fontWeight: "bold",
+        color: '#464646',
     },
     legenda: {
         fontSize: 16,
         lineHeight: 26,
+        color: '#A3A3A3',
     }
   })
   
