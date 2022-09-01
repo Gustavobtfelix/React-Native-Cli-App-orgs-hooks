@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {Image, StyleSheet, TouchableOpacity, View } from "react-native";
-import estrelaIMG from '../../../../assets/estrela.png';
-import estrelaCinzaIMG from '../../../../assets/estrelaCinza.png';
+import estrelaIMG from '../../../../../assets/estrela.png';
+import estrelaCinzaIMG from '../../../../../assets/estrelaCinza.png';
 
 function Estrelas({ //parametros
     quantidade: quantidadeOrigem, //quantidade vem de ProdutoresLista.js

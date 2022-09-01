@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'; //
 import { FlatList, StyleSheet, Text } from 'react-native';
 
 import { carregaProdutores } from '../../../servicos/carregaDados';
-import Lista from './ProdutoresLista';
+import Lista from './Componentes2/ProdutoresLista';
 
 function Produtores({ topo: Topo }){ //Topo é o componente que vem do componente pai
 
@@ -26,7 +26,7 @@ function Produtores({ topo: Topo }){ //Topo é o componente que vem do component
     return <FlatList 
         data={lista}
         //renderItem={({item: {nome}}) => <Text>{ nome}</Text>}
-        renderItem={({item}) => <Lista {...item} />}
+        renderItem={({item}) => <Lista {...item} />} //item é o array com os valores da lista
         KeyExtractor={({ nome }) => nome}
         ListHeaderComponent={TituloLista} />
 }
