@@ -1,21 +1,22 @@
-import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import React, { useState } from "react";
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import Estrelas from './Estrelas';
 
 
-function ListaDeProdutos({nome, imagem, distancia, estrelas}) {
-  return <View style={estilos.caixaCSS}>
-                 
-                <Image source={imagem} accessibilityLabel={nome} style={estilos.imagemCSS}/>
-                <View style={estilos.listaCSS}>
-                    <View>
-                        <Text style={estilos.nomeCSS}> {nome} </Text>
-                        <Estrelas quantidade={ estrelas }/>
-                    </View>
-                    <Text style={estilos.distancia}>{distancia}</Text>                    
-                </View>
-                 
-  </View>;
+function ListaDeProdutos({nome, imagem, distancia, estrelas}) {  
+    const [selecionado, setSelecionado] = useState(false); //Muda botão de grande para pequeno no <Estrelas>
+    return <TouchableOpacity style={estilos.caixaCSS} onPress={() => setSelecionado(!selecionado)}> 
+
+                  <Image source={imagem} accessibilityLabel={nome} style={estilos.imagemCSS}/>
+                  <View style={estilos.listaCSS}>
+                      <View>
+                          <Text style={estilos.nomeCSS}> {nome} </Text>
+                          <Estrelas quantidade={ estrelas } editavel={ selecionado } grande={ selecionado }/>
+                      </View>
+                      <Text style={estilos.distancia}>{distancia}</Text>                    
+                  </View>
+
+    </TouchableOpacity>;
 }
 
 const estilos = StyleSheet.create({
