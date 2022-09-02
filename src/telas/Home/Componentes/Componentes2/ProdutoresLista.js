@@ -4,12 +4,11 @@ import Estrelas from './Estrelas';
 
 
 function ListaDeProdutos({nome, imagem, distancia, estrelas}) {  
-    // const [selecionado, setSelecionado] = useState(false); //Muda botão de grande para pequeno no <Estrelas>
-    const [selecionado, inverterSelecionado] = useReducer(
+    const [selecionado, inverterSelecionado] = useReducer( //Muda botão de grande para pequeno no <Estrelas>
                                                          (selecionado) => !selecionado,
-                                                          false); //Muda botão de grande para pequeno no <Estrelas>
+                                                          false); 
 
-    return <TouchableOpacity style={estilos.caixaCSS} onPress={() => inverterSelecionado()} /*setSelecionado(!selecionado)*/ >  
+    return <TouchableOpacity style={estilos.caixaCSS} onPress={() => inverterSelecionado()} >  
 
                   <Image source={imagem} accessibilityLabel={nome} style={estilos.imagemCSS}/>
                   <View style={estilos.listaCSS}>
