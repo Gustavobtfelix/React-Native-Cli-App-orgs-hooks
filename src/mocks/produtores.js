@@ -15,31 +15,31 @@ const produtoresTXT = {
         {
             nome: "Green",
             imagem: green,
-            distancia: `${gerarNumeroAleatorio(1, 500)}m`, // ${}m = método de adicionar js na string
+            distancia: `Distância: ${gerarNumeroAleatorio(1, 500)}m`, // ${}m = método de adicionar js na string
             estrelas: gerarNumeroAleatorio(0, 5),
         },
         {
             nome: "Grow",
             imagem: grow,
-            distancia: `${gerarNumeroAleatorio(1, 500)}m`, // ${}m = método de adicionar js na string
+            distancia: `Distância: ${gerarNumeroAleatorio(1, 500)}m`,
             estrelas: gerarNumeroAleatorio(0, 5),
         },
         {
             nome: "Jenny Jack Farm",
             imagem: jennyJack,
-            distancia: `${gerarNumeroAleatorio(1, 500)}m`, // ${}m = método de adicionar js na string
+            distancia: `Distância: ${gerarNumeroAleatorio(1, 500)}m`,
             estrelas: gerarNumeroAleatorio(0, 5),
         },
         {
             nome: "Potager",
             imagem: potager,
-            distancia: `${gerarNumeroAleatorio(1, 500)}m`, // ${}m = método de adicionar js na string
+            distancia: `Distância: ${gerarNumeroAleatorio(1, 500)}m`,
             estrelas: gerarNumeroAleatorio(0, 5),
         },
         {
             nome: "Salad",
             imagem: salad,
-            distancia: `${gerarNumeroAleatorio(1, 500)}m`, // ${}m = método de adicionar js na string
+            distancia: `Distância: ${gerarNumeroAleatorio(1, 500)}m`,
             estrelas: gerarNumeroAleatorio(0, 5),
         },
     ]
