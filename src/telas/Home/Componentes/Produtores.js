@@ -1,19 +1,12 @@
-import React, { useEffect, useState } from 'react'; // 
+import React from 'react'; // 
 import { FlatList, StyleSheet, Text } from 'react-native';
 
-import { carregaProdutores } from '../../../servicos/carregaDados';
+import useProdutores from '../../../hooks/useProdutores';
 import Lista from './Componentes2/ProdutoresLista';
 
 function Produtores({ topo: Topo }){ //Topo é o componente que vem do componente pai
 
-    const [titulo, setTitulo] = useState("Carregando..."); //titulo é o estado, setTitulo é a função que altera o estado
-    const [lista, setLista] = useState([]);
-
-    useEffect(() => {
-        const retorno = carregaProdutores();
-        setTitulo(retorno.tituloTXT);
-        setLista(retorno.listaTXT);
-    }, []); // useeffect com [] = array vazio = executa uma vez / useEffect : https://pt-br.reactjs.org/docs/hooks-effect.html
+    const [titulo, lista] = useProdutores();
 
     const TituloLista = () => {
         return <>
