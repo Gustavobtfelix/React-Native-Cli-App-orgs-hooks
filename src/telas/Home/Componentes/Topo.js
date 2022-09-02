@@ -2,15 +2,18 @@ import React from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
 
 import logoOrgsImagem from '../../../../assets/logoOrgs.png';
+import useTopo from '../../../hooks/useTopo';
 
 
 
 function Topo() {
+    const [titulo, descricao] = useTopo();
+
     return <>
        <View style={estilos.Topo}>
        <Image source={logoOrgsImagem} style={estilos.logoOrgs}/>
-       <Text style={estilos.BoasVindas}> Olá Leitor </Text>
-       <Text style={estilos.legenda}> Encontre os melhores produtores </Text>
+       <Text style={estilos.BoasVindas}> {titulo} </Text>
+       <Text style={estilos.legenda}> {descricao} </Text>
        </View>
     </>
   }

@@ -6,7 +6,14 @@ import salad from '../../assets/produtores/salad.png';
 
 const gerarNumeroAleatorio = (min, max) => {
     const numero = Math.random() * (max - min) + min; //gera numero randomico entre min e max
-    return Math.floor(numero); //arredonda numero
+    return  Math.floor(numero); //arredonda numero
+}
+
+const geraDistancia = () => {
+    return `Distância: ${gerarNumeroAleatorio(1, 500)}m`  // ${}m = método de adicionar js na string
+}
+const geraEstrelas = () => {
+    return gerarNumeroAleatorio(0, 5)
 }
 
 const produtoresTXT = {
@@ -15,32 +22,32 @@ const produtoresTXT = {
         {
             nome: "Green",
             imagem: green,
-            distancia: `Distância: ${gerarNumeroAleatorio(1, 500)}m`, // ${}m = método de adicionar js na string
-            estrelas: gerarNumeroAleatorio(0, 5),
+            distancia: geraDistancia(),
+            estrelas: geraEstrelas(),
         },
         {
             nome: "Grow",
             imagem: grow,
-            distancia: `Distância: ${gerarNumeroAleatorio(1, 500)}m`,
-            estrelas: gerarNumeroAleatorio(0, 5),
+            distancia: geraDistancia(),
+            estrelas: geraEstrelas(),
         },
         {
             nome: "Jenny Jack Farm",
             imagem: jennyJack,
-            distancia: `Distância: ${gerarNumeroAleatorio(1, 500)}m`,
-            estrelas: gerarNumeroAleatorio(0, 5),
+            distancia: geraDistancia(),
+            estrelas: geraEstrelas(),
         },
         {
             nome: "Potager",
             imagem: potager,
-            distancia: `Distância: ${gerarNumeroAleatorio(1, 500)}m`,
-            estrelas: gerarNumeroAleatorio(0, 5),
+            distancia: geraDistancia(),
+            estrelas: geraEstrelas(),
         },
         {
             nome: "Salad",
             imagem: salad,
-            distancia: `Distância: ${gerarNumeroAleatorio(1, 500)}m`,
-            estrelas: gerarNumeroAleatorio(0, 5),
+            distancia: geraDistancia(),
+            estrelas: geraEstrelas(),
         },
     ]
 } 
