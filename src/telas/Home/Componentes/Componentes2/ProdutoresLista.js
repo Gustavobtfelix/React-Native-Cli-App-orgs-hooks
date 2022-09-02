@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import Estrelas from './Estrelas';
 
 
 function ListaDeProdutos({nome, imagem, distancia, estrelas}) {  
-    const [selecionado, setSelecionado] = useState(false); //Muda botão de grande para pequeno no <Estrelas>
-    return <TouchableOpacity style={estilos.caixaCSS} onPress={() => setSelecionado(!selecionado)}> 
+    // const [selecionado, setSelecionado] = useState(false); //Muda botão de grande para pequeno no <Estrelas>
+    const [selecionado, inverterSelecionado] = useReducer(
+                                                         (selecionado) => !selecionado,
+                                                          false); //Muda botão de grande para pequeno no <Estrelas>
+
+    return <TouchableOpacity style={estilos.caixaCSS} onPress={() => inverterSelecionado()} /*setSelecionado(!selecionado)*/ >  
 
                   <Image source={imagem} accessibilityLabel={nome} style={estilos.imagemCSS}/>
                   <View style={estilos.listaCSS}>
