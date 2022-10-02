@@ -34,7 +34,8 @@ Você pode baixar diretamente o zip do projeto usando os links abaixo:
 
 Para instalar o React Native e o ambiente nativo na sua máquina siga os passos do [artigo de configuração de ambiente](https://www.alura.com.br/artigos/configurando-o-ambiente-react-native).
 
-site explicando como utilizar hooks: https://pt-br.reactjs.org/docs/hooks-intro.html
+[site explicando como utilizar hooks](https://pt-br.reactjs.org/docs/hooks-intro.html).
+
 
 📚 Amostra final do projeto
 
