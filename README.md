@@ -2,7 +2,7 @@
 
 # Lista de Produtores na Home do Orgs
 
-Projeto do curso de React Native: Utilizando e criando Hooks na Alura.
+Projeto do curso de React Native: Utilizando e criando Hooks na [Alura](alura.com.br).
 
 ## 🔨 Funcionalidades do projeto
 
